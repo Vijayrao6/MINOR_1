@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/reg"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        tools:context=".MainActivity"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageView"
+            android:layout_width="334dp"
+            android:layout_height="332dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/rajat" >
+
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Register Here"
+                android:textColor="@color/btnbgcolor"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Your Email"
+                android:textColorHint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pwd"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:hint="Your Password"
+                android:textColorHint="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn"
+                app:layout_constraintTop_toBottomOf="@id/pwd"
+                app:layout_constraintLeft_toLeftOf="@id/imageView"
+                app:layout_constraintRight_toRightOf="@id/imageView"
+                android:layout_width="201dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/btnbgcolor"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="singup"
+                android:text="SUBMIT"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:backgroundTint="@color/vijay"
+                app:iconTint="#F1E1E1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:layout_marginLeft="120dp"
+                android:onClick="gotosignin"
+                android:text="Already Registered ?"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@id/imageView"
+                app:layout_constraintRight_toRightOf="@id/imageView"
+                app:layout_constraintTop_toBottomOf="@id/btn"
+                app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageView2"
+            android:layout_width="337dp"
+            android:layout_height="571dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/rajat"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <TextView
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="WELCOME"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="@id/imageView2"
+                app:layout_constraintRight_toRightOf="@id/imageView2"
+                app:layout_constraintTop_toTopOf="@id/imageView2" />
+
+            <ProgressBar
+                android:id="@+id/progressBar3"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.459" />
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="271dp"
+                android:layout_height="484dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:text="Discover the beauty of streets of India on our electric bikes! Surrender yourself to the pearl of Indian importance, the pearl that nature has been breading for you for millions of years! Thanks to our electric bikes, you can fully experience the trips through our Electric bikes, you will pass through the most beautiful valleys, which are inaccessible to other vehicles. You can follow the  deep forests and easily reach all accessible places in the most picturesque setting of India. Nothing prevents our electric bikes to take you to nearby places. The quiet running of the electric bikes is a guarantee that you will  enjoy your ride. At the same time, riding an electric bike will contribute to the air cleanliness in our environment.An electric bike is, first and foremost, a bike. It uses the same designs, geometries, and components as any other bike, but also includes an added electric motor. This is fueled by a rechargeable battery, which gives riders an extra boost of power and ultimately provides a smoother, more convenient, and less strenuous biking experience."
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/imageView2"
+                app:layout_constraintRight_toRightOf="@id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextTextPersonName4" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageView3"
+            android:layout_width="332dp"
+            android:layout_height="256dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/rajat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            >
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="@id/imageView3"
+                app:layout_constraintRight_toRightOf="@id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/imageView3"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GET MOBILE"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="163dp"
+                tools:layout_editor_absoluteY="966dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="261dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="20dp"
+                android:ems="10"
+                android:text="Access eco-friendly ride,  budget friendly  and quality vehicle, right from the E-Bike Rental app on your phone. Available today on iOS, Android, or Windows:"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/imageView3"
+                app:layout_constraintRight_toRightOf="@id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+
+                android:layout_width="104dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="228dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/imageView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/app" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="104dp"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/goo" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="104dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toEndOf="@+id/imageView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:srcCompat="@drawable/ms" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
